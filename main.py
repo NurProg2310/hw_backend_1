@@ -10,6 +10,10 @@ def read_root():
 def ping():
     return {"ping": "pong!"}
 
+@app.get("/GET")
+def get():
+    return {"message": "Hello, nfactorial!"}
+
 @app.get("/info", response_class=PlainTextResponse)
 async def info(request: Request):
     return (
