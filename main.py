@@ -21,7 +21,7 @@ async def info(request: Request):
         f"{request.url}\n"
         f"HTTP/{request.scope.get('http_version')}"
     )
-@app.post("/meaning-of-life",response_class=PlainTextResponse)
+@app.post("/meaning-of-life")
 async def meaning_of_life():
     return {"meaning": "42"}
 
